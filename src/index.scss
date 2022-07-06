@@ -1,0 +1,640 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+#light {
+  background-color: white;
+  color: black;
+  --background-color: white;
+  --color: rgba(0, 0, 0, 0.15);
+  --bgColor: #f5f6f7;
+  --btnHovercolor: rgba(0, 0, 0, 0.15);
+}
+#dark {
+  background-color: #282c34;
+  --background-color: #282c34;
+  color: white;
+  --color: rgba(255, 255, 255, 0.15);
+  --btnHovercolor: rgba(255, 255, 255, 0.15);
+}
+
+// NAVLINK ACTIVE CLASS
+.active {
+  border-bottom: 1px solid #2698e9;
+}
+// -------------------
+
+//!------APP COMPONENT-------------
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+//----END OF APP COMPONENT---------
+
+// NAVBAR TOGGLE ICON
+.show-navbar {
+  height: 12.3rem !important;
+  transition: 1s height;
+  @media screen and (min-width: 769px) {
+    display: flex !important;
+    height: 0 !important;
+  }
+}
+// -----------------------
+
+//*****!NAVBAR COMPONENT*************
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  user-select: none;
+  flex-wrap: wrap;
+  background-color: var(--bgColor);
+  box-shadow: 0 0.5rem 1rem var(--color);
+  .navbar-toggle-icon {
+    display: none;
+  }
+  @media screen and (max-width: 769px) {
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  div.logo {
+    margin: 0.8rem 4.2rem;
+    width: 5rem;
+    display: flex;
+    @media screen and (max-width: 769px) {
+      margin: 0.5rem 1.8rem;
+    }
+    &-text {
+      font-size: 1.7rem;
+    }
+    .toggle-icon {
+      cursor: pointer;
+      font-size: 1.5rem;
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+  }
+  @media screen and (max-width: 769px) {
+    .navbar-toggle-icon {
+      display: block;
+      margin: 0.5rem 1.8rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  .container {
+    margin: 0.8rem 4.2rem;
+    display: flex;
+    @media screen and (max-width: 769px) {
+      flex-direction: column;
+      margin: -5px 19px;
+      width: 100%;
+      height: 0px;
+      overflow: hidden;
+      transition: 1s height;
+    }
+    &__item {
+      margin: 5px 10px;
+      a {
+        font-size: 1.3rem;
+        color: inherit;
+      }
+    }
+  }
+}
+//!---END OF NAVBAR COMPONENT----
+
+//!------CONTENT COMPONENT---------
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  h1 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #3ab0ff;
+  }
+  .mini-header {
+    font-size: 2.5rem;
+  }
+  &-text {
+    font-size: 4rem;
+  }
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+  .row {
+    flex-wrap: wrap;
+    @media screen and (min-width: 1024px) {
+      width: 500px;
+      margin-top: 3rem;
+    }
+    @media screen and (min-width: 600px) {
+      .mini-header,
+      .content-text,
+      .typing-animation,
+      .social-media-icons {
+        margin-left: 2rem;
+      }
+    }
+    @media screen and (max-width: 840px) {
+      margin: 1rem;
+      .mini-header {
+        font-size: 2rem;
+      }
+      .content-text {
+        font-size: 3rem;
+      }
+      width: 350px;
+    }
+    @media screen and (max-width: 700px) {
+      width: 300px;
+      height: 200px;
+      .mini-header {
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+      }
+      .content-text {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .social-media-icons {
+    display: flex;
+    .icon {
+      font-size: 1.8rem;
+      padding: 0 0.3rem;
+    }
+    .github a {
+      color: inherit;
+    }
+    .linkedin a,
+    .facebook a {
+      color: #2698e9;
+    }
+  }
+  .image {
+    max-width: 100%;
+    height: auto;
+    @media screen and (min-width: 1024px) {
+      width: 500px;
+    }
+    @media screen and (max-width: 600px) {
+      margin-top: -0.8rem;
+    }
+  }
+
+  // TYPING ANIMATION-------
+  .typing-animation {
+    width: 15rem;
+    animation: typing 3s 1 steps(44) alternate,
+      blink 0.4s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 1.5em;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+}
+// -----------------------
+
+//!-----END OF CONTENT COMPONENT---------
+
+//!-------ABOUT COMPONENT---------
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  .row {
+    width: 80%;
+    .header {
+      margin: 0 auto;
+      margin-bottom: 0.8rem;
+      width: 158px;
+      border-bottom: 2px solid #2698e9;
+    }
+    .about-text {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      word-spacing: 2px;
+      @media screen and (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+    .buttonDownload {
+      margin-top: 1rem;
+      display: inline-block;
+      position: relative;
+      padding: 10px 25px;
+      background-color: #4cc713;
+      color: white;
+
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.9em;
+      text-align: center;
+      text-indent: 15px;
+      &:hover {
+        background-color: var(--btnHovercolor);
+        color: inherit;
+      }
+      &::before,
+      &::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 52%;
+      }
+      &::before {
+        width: 10px;
+        height: 2px;
+        border-style: solid;
+        border-width: 0 2px 2px;
+      }
+      &::after {
+        width: 0;
+        height: 0;
+        margin-left: 3px;
+        margin-top: -7px;
+
+        border-style: solid;
+        border-width: 4px 4px 0 4px;
+        border-color: transparent;
+        border-top-color: inherit;
+
+        animation: downloadArrow 2s linear infinite;
+        animation-play-state: paused;
+      }
+      &:hover::before {
+        border-color: #4cc713;
+      }
+      &:hover::after {
+        border-top-color: #4cc713;
+        animation-play-state: running;
+      }
+      @keyframes downloadArrow {
+        /* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+        0% {
+          margin-top: -7px;
+          opacity: 1;
+        }
+
+        0.001% {
+          margin-top: -15px;
+          opacity: 0;
+        }
+
+        50% {
+          opacity: 1;
+        }
+
+        100% {
+          margin-top: 0;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+//!END OF ABOUT COMPONENT---------
+
+//*--------SKILLS COMPONENT-------------
+.skills {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  &-header {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 90px;
+    border-bottom: 2px solid #2698e9;
+  }
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    //!--------PROGRESS BAR---------------
+    .containerStyles {
+      display: flex;
+      flex-wrap: wrap;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      @media screen and (min-width: 768px) {
+        width: 45%;
+      }
+    }
+    //!-----------------------------------
+  }
+}
+//*----END OF SKILLS COMPONENT----------
+
+//!------Project COMPONENT--------------------
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+  .project {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 320px;
+    height: 380px;
+    margin: 1rem;
+    .image-container {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      .image {
+        width: 286px;
+        height: 138px;
+        border-radius: 12px;
+      }
+    }
+    .tags {
+      display: flex;
+      margin-left: 0.5rem;
+      .tag {
+        padding-left: 0.5rem;
+        padding-bottom: 0.3rem;
+      }
+    }
+    .title {
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .description {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+    }
+    .btn {
+      margin: 0 0.8rem;
+      border-radius: 12px;
+      padding: 0.5rem 2.7rem;
+      height: 40px;
+      cursor: pointer;
+      position: absolute;
+      bottom: 20px;
+    }
+    .demoBtn {
+      color: white;
+      background: #2f80ed;
+      &:hover {
+        color: #2f80ed;
+        background-color: #fff;
+        border: 1px solid #2f80ed;
+      }
+    }
+    .codeBtn {
+      left: 160px;
+      color: #2f80ed;
+      background-color: #fff;
+      border: 1px solid #2f80ed;
+      &:hover {
+        color: #fff;
+        background-color: #2f80ed;
+        border: none;
+      }
+    }
+  }
+}
+
+//!-----END OF PROJECT COMPONENT--------------
+
+//?------CONTACT COMPONENT--------------------
+.contact {
+  &-header {
+    margin: 1.5rem auto;
+    width: 125px;
+    border-bottom: 2px solid #2698e9;
+  }
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .about-section,
+    form {
+      height: 400px;
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 0 1rem;
+      @media screen and (max-width: 400px) {
+        width: 300px;
+      }
+      @media screen and (max-width: 768px) {
+        width: 350px;
+        margin-bottom: 1rem;
+      }
+      @media screen and (min-width: 768px) {
+        width: 350px;
+      }
+      @media screen and (min-width: 1024px) {
+        width: 450px;
+      }
+    }
+    .about-section {
+      .row {
+        display: flex;
+        margin: 2rem;
+        padding: 1rem;
+        .icon {
+          font-size: 2.2rem;
+          margin-top: 0.4rem;
+        }
+        .description {
+          .title {
+            font-size: 1.4rem;
+          }
+          .about {
+            font-size: 1rem;
+            color: inherit;
+          }
+        }
+      }
+    }
+    form {
+      .row {
+        margin: 1rem;
+      }
+      .form__group {
+        position: relative;
+        padding: 25px 0 0;
+        margin-top: 10px;
+        width: 90%;
+
+        .form__field {
+          font-family: inherit;
+          width: 100%;
+          border: none;
+          border-bottom: 2px solid #9b9b9b;
+          border-left: 2px solid #9b9b9b;
+          outline: 0;
+          font-size: 16px;
+          color: inherit;
+          padding: 7px 5px;
+          background: transparent;
+          transition: border-color 0.2s;
+        }
+
+        .form__field::placeholder {
+          color: transparent;
+        }
+
+        .form__field:placeholder-shown ~ .form__label {
+          font-size: 17px;
+          cursor: text;
+          top: 20px;
+          left: 10px;
+        }
+
+        .form__label {
+          position: absolute;
+          top: 0;
+          display: block;
+          transition: 0.2s;
+          font-size: 17px;
+          color: #9b9b9b;
+          pointer-events: none;
+        }
+
+        .form__field:focus {
+          padding-bottom: 6px;
+          font-weight: 700;
+          border-width: 3px;
+          border-image: linear-gradient(to right, #116399, #38caef);
+          border-image-slice: 1;
+        }
+
+        .form__field:focus ~ .form__label {
+          position: absolute;
+          top: 0;
+          left: 10px;
+          display: block;
+          transition: 0.2s;
+          font-size: 17px;
+          color: #38caef;
+          font-weight: 700;
+        }
+
+        /* reset input */
+        .form__field:required,
+        .form__field:invalid {
+          box-shadow: none;
+        }
+      }
+      textarea {
+        resize: vertical;
+        height: 65px;
+      }
+    }
+    .cta {
+      cursor: pointer;
+      position: relative;
+      margin: -1rem 1rem;
+      padding: 10px 16px;
+      transition: all 0.2s ease;
+      border: none;
+      background: none;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 50px;
+        background: #b1dae7;
+        width: 40px;
+        height: 40px;
+        transition: all 0.3s ease;
+      }
+
+      span {
+        position: relative;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #234567;
+      }
+
+      svg {
+        position: relative;
+        top: 0;
+        margin-left: 10px;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: #234567;
+        stroke-width: 2;
+        transform: translateX(-5px);
+        transition: all 0.3s ease;
+      }
+
+      &:hover:before {
+        width: 100%;
+        background: #b1dae7;
+      }
+
+      &:hover svg {
+        transform: translateX(0);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+//?------END OF CONTACT COMPONENT-------------
+
+//!---------FORMSPREE MESSAGE-----------
+.contact-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 12rem;
+  h1.contact-title {
+    font-size: 1.5rem;
+  }
+  .button {
+    border: 2px solid var(--404-color);
+    color: var(--404-color);
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}

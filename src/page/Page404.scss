@@ -1,0 +1,29 @@
+#light {
+  --404-color: black;
+}
+#dark {
+  --404-color: white;
+}
+.page-404 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  .text-container {
+    .header {
+      margin-bottom: 1rem;
+    }
+    .button {
+      border: 2px solid var(--404-color);
+      color: var(--404-color);
+      padding: 0.5rem;
+      width: 100vw;
+      height: 100vh;
+      :hover {
+        background-color: var(--404-color)!important;
+        color: var(--404-color);
+      }
+    }
+  }
+}

@@ -1,3 +1,17 @@
+<h1 align="center">{Portfolio}</h1>
+<div align="center">
+  <h2>
+    <a href="https://nihadbalakisiyev.netlify.app">
+      Demo
+    </a>
+  </h3>
+</div>
+
+## Built With
+
+- [React]
+- [SCSS]
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
