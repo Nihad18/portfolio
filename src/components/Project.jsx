@@ -2,10 +2,7 @@ import React from "react";
 
 const Project = ({
   image,
-  tag1,
-  tag2,
-  tag3,
-  tag4,
+  tag,
   title,
   description,
   demoLink,
@@ -17,10 +14,7 @@ const Project = ({
         <img className='image' src={image} alt={title + "image"} />
       </div>
       <div className='tags'>
-        <p className='tag'>{tag1}</p>
-        <p className='tag'>{tag2}</p>
-        <p className='tag'>{tag3}</p>
-        <p className='tag'>{tag4}</p>
+        <p className='tag'>{tag}</p>
       </div>
       <div className='title'>{title}</div>
       <div className='description'>{description}</div>
