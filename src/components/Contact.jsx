@@ -28,17 +28,6 @@ function Contact() {
         <div className='about-section'>
           <div className='row'>
             <div className='icon'>
-              <IoMdCall />
-            </div>
-            <div className='description'>
-              <h1 className='title'>Call me</h1>
-              <a className='about' href='tel:994559762003'>
-                +994(55)976-20-03
-              </a>
-            </div>
-          </div>
-          <div className='row'>
-            <div className='icon'>
               <MdOutlineAlternateEmail />
             </div>
             <div className='description'>
