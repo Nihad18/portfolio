@@ -1,13 +1,6 @@
 import React from "react";
 
-const Project = ({
-  image,
-  tag,
-  title,
-  description,
-  demoLink,
-  codeLink,
-}) => {
+const Project = ({ image, tag, title, description, demoLink, codeLink }) => {
   return (
     <div className='project'>
       <div className='image-container'>
@@ -27,14 +20,16 @@ const Project = ({
         >
           Demo
         </a>
-        <a
-          href={codeLink}
-          target='_blank'
-          rel='noreferrer'
-          className='codeBtn btn'
-        >
-          Code
-        </a>
+        {codeLink && (
+          <a
+            href={codeLink}
+            target='_blank'
+            rel='noreferrer'
+            className='codeBtn btn'
+          >
+            Code
+          </a>
+        )}
       </div>
     </div>
   );
