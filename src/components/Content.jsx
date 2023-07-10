@@ -1,22 +1,27 @@
 import React from "react";
-import {Helmet} from "react-helmet"
+import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
 import {
   AiOutlineGithub,
   AiOutlineLinkedin,
   AiOutlineFacebook,
 } from "react-icons/ai";
-import image from "../images/Web development _Outline.svg"
+import image from "../images/Web development _Outline.svg";
 function Content() {
-      <Helmet>
-        <title>Home</title>
-      </Helmet>
- 
+  <Helmet>
+    <title>Home</title>
+  </Helmet>;
+
   return (
-    <div className='content'>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className='content'
+    >
       <div className='row'>
-        <h1 className="mini-header">Hi!</h1>
-        <h1 className="content-text">I AM NIHAD</h1>
-        <h1 className="content-text">Balakishiyev</h1>
+        <h1 className='mini-header'>Hi!</h1>
+        <h1 className='content-text'>I AM NIHAD</h1>
+        <h1 className='content-text'>Balakishiyev</h1>
         <h1 className='typing-animation'>Front end developer</h1>
         <ul className='social-media-icons'>
           <li className='github icon'>
@@ -50,10 +55,9 @@ function Content() {
       </div>
 
       <div className='row'>
-      <img className="image" src={image} alt="image" />
+        <img className='image' src={image} alt='image' />
       </div>
-
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
 import ProgressBar from "./ProgressBar";
 import Html from "../images/HTML5.png"
 import Css from "../images/CSS3.png"
@@ -25,14 +26,19 @@ function Skills() {
         <title>Skills</title>
       </Helmet>
   return (
-    <div className='skills'>
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    className='skills'>
+      <div>
       <h1 className='skills-header'>Skills</h1>
       <div className='skills-container'>
       {skillData.map((item, idx) => (
         <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} image={item.image} />
       ))}
       </div>
-    </div>
+      </div>
+    </motion.div>
   );
 }
 
