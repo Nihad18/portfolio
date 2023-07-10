@@ -50,6 +50,7 @@ function App() {
     downloadCV,
     setDownloadCV,
   };
+  
   return (
     <>
       <MainContext.Provider value={data}>

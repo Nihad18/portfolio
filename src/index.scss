@@ -14,6 +14,7 @@
   --color: rgba(0, 0, 0, 0.15);
   --bgColor: #f5f6f7;
   --btnHovercolor: rgba(0, 0, 0, 0.15);
+  transition: 0.5s all;
 }
 #dark {
   background-color: #282c34;
@@ -21,6 +22,7 @@
   color: white;
   --color: rgba(255, 255, 255, 0.15);
   --btnHovercolor: rgba(255, 255, 255, 0.15);
+  transition: 0.5s all;
 }
 
 // NAVLINK ACTIVE CLASS
@@ -41,13 +43,15 @@
 .show-navbar {
   height: 12.3rem !important;
   transition: 1s height;
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1024px) {
     display: flex !important;
     height: 0 !important;
   }
 }
 // -----------------------
-
+.cursor-pointer {
+  cursor: pointer;
+}
 //*****!NAVBAR COMPONENT*************
 .navbar {
   display: flex;
@@ -60,7 +64,7 @@
   .navbar-toggle-icon {
     display: none;
   }
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 1024px) {
     padding-top: 0.5rem;
     margin-bottom: 1rem;
   }
@@ -68,20 +72,19 @@
     margin: 0.8rem 4.2rem;
     width: 5rem;
     display: flex;
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: 1024px) {
       margin: 0.5rem 1.8rem;
     }
     &-text {
       font-size: 1.7rem;
     }
     .toggle-icon {
-      cursor: pointer;
       font-size: 1.5rem;
       margin-top: 5px;
       margin-left: 10px;
     }
   }
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 1024px) {
     .navbar-toggle-icon {
       display: block;
       margin: 0.5rem 1.8rem;
@@ -92,7 +95,7 @@
   .container {
     margin: 0.8rem 4.2rem;
     display: flex;
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: 1024px) {
       flex-direction: column;
       margin: -5px 19px;
       width: 100%;
@@ -117,7 +120,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70%;
+  height: 90%;
   h1 {
     margin-bottom: 0.5rem;
     font-weight: 500;
@@ -226,7 +229,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
+  height: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
   .row {
     width: 80%;
     .header {
@@ -323,8 +328,10 @@
 
 //*--------SKILLS COMPONENT-------------
 .skills {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
   &-header {
     margin: 0 auto;
     margin-bottom: 1rem;
@@ -357,7 +364,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 1rem;
+  margin: 2rem auto;
+  max-width: 1360px;
   .project {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
@@ -383,12 +391,12 @@
       margin-left: 0.5rem;
       .tag {
         padding-left: 0.5rem;
-        padding-bottom: 0.3rem;
+        padding-bottom: 0.2rem;
       }
     }
     .title {
       margin-left: 1rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
       font-size: 1.2rem;
     }
     .description {
@@ -398,11 +406,11 @@
     .btn {
       margin: 0 0.8rem;
       border-radius: 12px;
-      padding: 0.5rem 2.7rem;
+      padding: 0.6rem 2.7rem;
       height: 40px;
       cursor: pointer;
       position: absolute;
-      bottom: 20px;
+      bottom: 12px;
     }
     .demoBtn {
       color: white;
@@ -431,6 +439,10 @@
 
 //?------CONTACT COMPONENT--------------------
 .contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
   &-header {
     margin: 1.5rem auto;
     width: 125px;
