@@ -20,7 +20,7 @@ function Navbar() {
   return (
     <div className='navbar' ref={ref}>
       <div className='logo'>
-        <div className='logo-text'>Portfolio</div>
+        <div className='logo-text cursor-pointer'>Portfolio</div>
         <div className='toggle-icon'>
           <input
             type='checkbox'
@@ -30,7 +30,7 @@ function Navbar() {
             defaultChecked={theme === "light"}
             style={{ display: "none" }}
           />
-          <label htmlFor='checkbox' onClick={() => setIsOff(!isOff)}>
+          <label className="cursor-pointer" htmlFor='checkbox' onClick={() => setIsOff(!isOff)}>
             {isOff ? <BsMoonFill /> : <BsFillSunFill />}
           </label>
         </div>
