@@ -43,7 +43,7 @@
 .show-navbar {
   height: 12.3rem !important;
   transition: 1s height;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1023px) {
     display: flex !important;
     height: 0 !important;
   }
@@ -64,7 +64,7 @@
   .navbar-toggle-icon {
     display: none;
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     padding-top: 0.5rem;
     margin-bottom: 1rem;
   }
@@ -72,7 +72,7 @@
     margin: 0.8rem 4.2rem;
     width: 5rem;
     display: flex;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       margin: 0.5rem 1.8rem;
     }
     &-text {
@@ -84,7 +84,7 @@
       margin-left: 10px;
     }
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     .navbar-toggle-icon {
       display: block;
       margin: 0.5rem 1.8rem;
@@ -95,7 +95,7 @@
   .container {
     margin: 0.8rem 4.2rem;
     display: flex;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       flex-direction: column;
       margin: -5px 19px;
       width: 100%;
@@ -138,7 +138,7 @@
   }
   .row {
     flex-wrap: wrap;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1023px) {
       width: 500px;
       margin-top: 3rem;
     }
@@ -189,7 +189,7 @@
   .image {
     max-width: 100%;
     height: auto;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1023px) {
       width: 500px;
     }
     @media screen and (max-width: 600px) {
@@ -442,6 +442,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 90%;
   &-header {
     margin: 1.5rem auto;
@@ -472,7 +473,7 @@
       @media screen and (min-width: 768px) {
         width: 350px;
       }
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 1023px) {
         width: 450px;
       }
     }

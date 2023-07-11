@@ -27,7 +27,6 @@ function Contact() {
     initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     className='contact'>
-      <div>
         <h1 className='contact-header'>Contact</h1>
         <div className='contact-container'>
           <div className='about-section'>
@@ -124,7 +123,6 @@ function Contact() {
             </button>
           </form>
         </div>
-      </div>
     </motion.div>
   );
 }
